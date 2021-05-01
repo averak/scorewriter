@@ -11,13 +11,7 @@ class Analyzer:
         # states of each key per time-frame
         # 0: not pushed, 1: pushed
         self.key_states_list: list = [
-            [0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0],
-        ]
+            [0] * config.N_MUSICAL_SCALE for _ in range(config.N_DRAWED_STATES)]
 
     def update(self, key_states: list) -> None:
         # clear old states

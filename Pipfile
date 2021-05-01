@@ -4,6 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+anal = "*"
 
 [dev-packages]
 flake8 = "*"
@@ -14,6 +15,7 @@ mypy = "*"
 python_version = "3.8"
 
 [scripts]
+start "python main.py"
 test = "python -m unittest discover tests"
 format = "autopep8 -ivr ."
 lint = "flake8 --show-source ."
