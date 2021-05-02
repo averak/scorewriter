@@ -19,13 +19,15 @@ $ pipenv install
 
 ## Usage
 
-### Generate analyzer format
-
-1. set `N_MUSICAL_SCALE` and `N_DRAWED_STATES` in `./core/config.py`
-2. run `./generate_anal_template.py`
-
 ### Run app
 
-```sh
-$ pipenv run start
-```
+- `pipenv run start --run` - run scorewriter app
+- `pipenv run start --analyzer` - display spectrum analyzer
+- `pipenv run start --help` - print help
+
+### Generate analyzer format
+
+If you want to customize the output format of the analyzer, follow the steps below.
+
+1. set `N_MUSICAL_SCALE` and `N_DRAWED_STATES` in `./core/config.py`
+2. run `pipenv run ./generate_anal_template.py`

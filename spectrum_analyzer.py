@@ -51,8 +51,6 @@ qt_curve_spectrum = qt_plotitem2.plot()
 # Widget
 qt_lay.addWidget(qt_plotwid1)
 qt_lay.addWidget(qt_plotwid2)
-# Show plot window
-qt_win.show()
 
 
 def update() -> None:
@@ -68,8 +66,16 @@ def update() -> None:
     qt_curve_spectrum.setData(np.fft.fftfreq(1024, d=1 / 16000), wav_spectrum)
 
 
-if __name__ == '__main__':
+def run_app() -> None:
+    # show window
+    qt_win.show()
+    # set timer
     qt_timer = pg.QtCore.QTimer()
     qt_timer.timeout.connect(update)
     qt_timer.start(10)
+    # run app
     pg.QtGui.QApplication.instance().exec_()
+
+
+if __name__ == '__main__':
+    run_app()
