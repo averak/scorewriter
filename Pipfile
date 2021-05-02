@@ -9,6 +9,7 @@ pyaudio = "*"
 numpy = "*"
 pyqtgraph = "*"
 pyqt6 = "*"
+scipy = "*"
 
 [dev-packages]
 flake8 = "*"
